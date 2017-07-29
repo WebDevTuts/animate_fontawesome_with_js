@@ -7,7 +7,7 @@
   <title>Animated Icons</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    #chain, #battery {
+    #chain, #battery, #hourglass {
       font-size: 50px;
     }
   </style>
@@ -18,6 +18,10 @@
   <br><br>
 
   <div id="battery" class="fa"></div>
+
+  <br><br>
+
+  <div id="hourglass" class="fa"></div>
 
   <script>
 
@@ -60,6 +64,24 @@
 
     // Run animation every 5 seconds
     setInterval(chargeBattery, 5000);
+
+    // Hourglass tip animation
+    function hourglassTip() {
+      let hourglass =  document.getElementById('hourglass');
+      hourglass.innerHTML = '&#xf251;';
+      setTimeout(function() {
+        hourglass.innerHTML = '&#xf252;';
+      }, 1000);
+      setTimeout(function() {
+        hourglass.innerHTML = '&#xf253;';
+      }, 2000);
+    }
+
+    // Run animation
+    hourglassTip();
+
+    // Run animation every 3 seconds
+    setInterval(hourglassTip, 3000);
 
   </script>
 </body>
