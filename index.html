@@ -6,8 +6,33 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Animated Icons</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    #chain {
+      font-size: 50px;
+    }
+  </style>
 </head>
 <body>
+  <div id="chain" class="fa"></div>
 
+  <script>
+
+    // Brake chain animation
+    function brakeChain() {
+      let chain = document.getElementById('chain');
+      chain.innerHTML = '&#xf0c1';
+
+      setTimeout(function() {
+        chain.innerHTML = '&#xf127;'
+      }, 1000);
+    }
+
+    // Call animation
+    brakeChain();
+
+    //Animate every 2 seconds
+    setInterval(brakeChain, 2000);
+
+  </script>
 </body>
 </html>
